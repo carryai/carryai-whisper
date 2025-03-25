@@ -114,7 +114,7 @@ def handle_file_upload(request):
 
 # Initialize ngrok connection
 if __name__ == "__main__":
-    # ngrok.set_auth_token("5SKYZpcrcXYcgmHcCS8m7_5K2zjktmUTJjgLQJdMrME")
+    # ngrok.set_auth_token("XXXXXXXXX")
     # tunnel = ngrok.connect("8008")
     # print("ngrok connected: ", tunnel.public_url)
 
