@@ -1,0 +1,14 @@
+[Unit]
+Description=LLM Assistant Service
+After=network.target
+
+[Service]
+Type=simple
+User=jetsonnano
+#if user is jetson nano, then error occurs with the reading and writing of the db
+WorkingDirectory=/home/jetsonnano/src/carryai-whisper
+ExecStart=/bin/bash -c '/home/jetsonnano/anaconda3/bin/python3.12 /home/jetsonnano/src/carryai-whisper/whisper-api-server.py'
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
