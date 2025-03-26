@@ -151,7 +151,10 @@ if __name__ == "__main__":
 
         # Transcribe the file using the selected model
         start_time = time.time()
-        result = model.transcribe(file_path)
+        result = model.transcribe(
+            file_path,
+            language="cantonese"
+        )
         inference_time = time.time() - start_time
 
         print(result['text'])
